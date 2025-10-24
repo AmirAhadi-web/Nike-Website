@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@font-face {
+    font-family: oswald;
+    src: url(../font/Oswald-Regular.ttf);
+}
+
+@theme{
+    --animate-anime: a1 1s ease-in-out forwards;
+    @keyframes a1{
+        to{transform: rotate(360deg);}
+    }
+}
+@layer base{
+    a{
+        @apply text-black decoration-0
+    }
+    body{
+        font-family: oswald;
+    }
+}
+
+@layer components{
+    .btn{
+        @apply w-[200px] h-[80px] bg-green-400 text-amber-900 flex justify-center items-center cursor-pointer
+    }
+    .btndrop{
+        @apply w-[200px] h-[90px] rounded-2xl mb-6 bg-purple-800 text-white p-[15px] flex flex-wrap
+    }
+    .btnheader{
+        @apply w-[200px] h-[80px] rounded-2xl duration-500 bg-green-400 relative *:absolute *:top-7 *:duration-700
+    }
+}
+
+@layer utilities{
+    .bt{
+        @apply bg-amber-400 border border-amber-800
+    }
+    .row{
+        @apply w-full flex flex-wrap
+    }
+    .card{
+        @apply h-[500px] rounded-2xl border border-gray-700 shadow-2xl shadow-green-500 *:w-full p-5 *:flex *:justify-start
+    }
+}
